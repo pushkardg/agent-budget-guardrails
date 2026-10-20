@@ -1,0 +1,17 @@
+{
+  "runs": 300,
+  "resolved": 79,
+  "unresolved": 221,
+  "stuck": 16,
+  "stuck_resolved": 5,
+  "median_actions": 6.0,
+  "max_actions": 106,
+  "stuck_min_actions": 7,
+  "stuck_max_actions": 106,
+  "edits": 3491,
+  "failed_edits": 779,
+  "failed_test_rounds": 1142,
+  "max_identical_calls_in_a_row": 4,
+  "runs_with_usable_timestamps": 297,
+  "median_seconds_per_action_between_timestamps": 71.8
+}

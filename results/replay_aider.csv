@@ -1,0 +1,7 @@
+detector,fired_on_resolved_n,fired_on_unresolved_n,fired_on_stuck_n,runs
+exact (tool + arguments),1,0,0,300
+"exact, tighter window (10/5)",1,2,0,300
+file name only,20,98,14,300
+"breaker as simulated (5 in 60 s), real timestamps",0,1,1,297
+"breaker, 5 in 30 min, real timestamps",9,69,12,297
+"breaker, 5 in 30 min, edits only",3,11,5,297

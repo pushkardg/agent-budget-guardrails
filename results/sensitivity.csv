@@ -1,0 +1,24 @@
+parameter,value,default,legit_completed_pct,runaway_contained_pct,mean_runaway_usd,failures
+novelty_floor,0.2,False,83.3,71.4,5.31,slow_drip missed 30/30; deep_delegation killed 30/30; stuck_poll missed 30/30
+novelty_floor,0.3,False,83.3,71.4,5.05,slow_drip missed 30/30; deep_delegation killed 30/30; stuck_poll missed 30/30
+novelty_floor,0.4,True,83.3,71.4,4.72,slow_drip missed 30/30; deep_delegation killed 30/30; stuck_poll missed 30/30
+novelty_floor,0.5,False,83.3,71.4,4.57,slow_drip missed 30/30; deep_delegation killed 30/30; stuck_poll missed 30/30
+novelty_floor,0.6,False,83.3,71.4,4.51,slow_drip missed 30/30; deep_delegation killed 30/30; stuck_poll missed 30/30
+long_novelty_window,0,False,83.3,71.4,17.86,slow_drip missed 30/30; deep_delegation killed 30/30; stuck_poll missed 30/30
+long_novelty_window,50,False,83.3,71.4,10.49,slow_drip missed 30/30; deep_delegation killed 30/30; stuck_poll missed 30/30
+long_novelty_window,100,True,83.3,71.4,4.72,slow_drip missed 30/30; deep_delegation killed 30/30; stuck_poll missed 30/30
+long_novelty_window,200,False,83.3,71.4,6.49,slow_drip missed 30/30; deep_delegation killed 30/30; stuck_poll missed 30/30
+max_tree_depth,2,False,83.3,71.4,4.72,slow_drip missed 30/30; deep_delegation killed 30/30; stuck_poll missed 30/30
+max_tree_depth,3,True,83.3,71.4,4.72,slow_drip missed 30/30; deep_delegation killed 30/30; stuck_poll missed 30/30
+max_tree_depth,5,False,96.7,71.4,5.84,slow_drip missed 30/30; deep_delegation killed 6/30; stuck_poll missed 30/30
+max_tree_depth,8,False,100.0,71.4,6.84,slow_drip missed 30/30; stuck_poll missed 30/30
+run_budget_usd,1.0,False,72.2,71.4,4.22,long_var killed 1/30; batch_var killed 9/30; wide_batch killed 10/30; slow_drip missed 30/30; deep_delegation killed 30/30; stuck_poll missed 30/30
+run_budget_usd,5.0,True,83.3,71.4,4.72,slow_drip missed 30/30; deep_delegation killed 30/30; stuck_poll missed 30/30
+run_budget_usd,20.0,False,93.9,71.4,6.86,slow_drip missed 30/30; deep_delegation killed 11/30; stuck_poll missed 30/30
+max_run_budget_usd,25.0,False,65.0,71.4,4.71,long_var killed 6/30; batch_var killed 14/30; wide_batch killed 13/30; slow_drip missed 30/30; deep_delegation killed 30/30; stuck_poll missed 30/30
+max_run_budget_usd,50.0,False,81.1,71.4,4.72,batch_var killed 4/30; slow_drip missed 30/30; deep_delegation killed 30/30; stuck_poll missed 30/30
+max_run_budget_usd,100.0,True,83.3,71.4,4.72,slow_drip missed 30/30; deep_delegation killed 30/30; stuck_poll missed 30/30
+max_run_budget_usd,200.0,False,83.3,71.4,4.72,slow_drip missed 30/30; deep_delegation killed 30/30; stuck_poll missed 30/30
+max_tool_rejections,1,False,83.3,71.4,4.66,slow_drip missed 30/30; deep_delegation killed 30/30; stuck_poll missed 30/30
+max_tool_rejections,3,True,83.3,71.4,4.72,slow_drip missed 30/30; deep_delegation killed 30/30; stuck_poll missed 30/30
+max_tool_rejections,10,False,83.3,71.4,4.94,slow_drip missed 30/30; deep_delegation killed 30/30; stuck_poll missed 30/30

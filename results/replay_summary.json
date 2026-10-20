@@ -1,0 +1,16 @@
+{
+  "runs": 1980,
+  "successful": 1183,
+  "failed": 797,
+  "median_actions": 13.0,
+  "max_actions": 30,
+  "median_tool_calls": 7.0,
+  "pct_runs_with_10plus_actions": 80.7,
+  "runs_with_any_tool_error": 237,
+  "failed_runs_with_3plus_identical_calls_in_a_row": 0,
+  "successful_runs_with_3plus_identical_calls_in_a_row": 0,
+  "max_identical_calls_in_a_row": 2,
+  "median_est_cost_usd": 0.121,
+  "max_est_cost_usd": 0.691,
+  "runs_over_5_usd": 0
+}

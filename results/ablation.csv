@@ -1,0 +1,37 @@
+scenario,type,guardrail,outcome,total_spend_usd,runaway_spend_usd,time_to_contain,sim_duration,orphaned_side_effects,rolled_back_side_effects,rolled_back_spend_usd,bill_all_usd,bill_excl_rolled_back_usd,bill_absorb_guardrail_stops_usd,notes
+normal_task,legit,layered (all layers),completed,0.51,0.0,,90 s,0,0,0.0,0.51,0.51,0.51,
+normal_task,legit,- hierarchical budgets,completed,0.51,0.0,,90 s,0,0,0.0,0.51,0.51,0.51,
+normal_task,legit,- loop detection,completed,0.51,0.0,,90 s,0,0,0.0,0.51,0.51,0.51,
+normal_task,legit,- circuit breakers,completed,0.51,0.0,,90 s,0,0,0.0,0.51,0.51,0.51,
+normal_task,legit,- cap extensions,completed,0.51,0.0,,90 s,0,0,0.0,0.51,0.51,0.51,
+normal_task,legit,- velocity throttling,completed,0.51,0.0,,90 s,0,0,0.0,0.51,0.51,0.51,
+long_task,legit,layered (all layers),completed,19.8,0.0,,37.5 min,0,0,0.0,19.8,19.8,19.8,2 budget extension(s)
+long_task,legit,- hierarchical budgets,completed,19.8,0.0,,37.5 min,0,0,0.0,19.8,19.8,19.8,2 budget extension(s)
+long_task,legit,- loop detection,completed,19.8,0.0,,37.5 min,0,0,0.0,19.8,19.8,19.8,2 budget extension(s)
+long_task,legit,- circuit breakers,completed,19.8,0.0,,37.5 min,0,0,0.0,19.8,19.8,19.8,2 budget extension(s)
+long_task,legit,- cap extensions,"KILLED: budget exhausted for run0 subtree, extension denied",4.88,0.0,,9.2 min,0,0,0.0,4.88,4.88,0.0,
+long_task,legit,- velocity throttling,completed,19.8,0.0,,37.5 min,0,0,0.0,19.8,19.8,19.8,2 budget extension(s)
+parallel_batch,legit,layered (all layers),completed,39.7,0.0,,8.4 min,0,0,0.0,39.7,39.7,39.7,3 budget extension(s); throttled 9.0 min (summed across agents); 9 agents
+parallel_batch,legit,- hierarchical budgets,completed,39.7,0.0,,8.4 min,0,0,0.0,39.7,39.7,39.7,throttled 9.0 min (summed across agents); 9 agents
+parallel_batch,legit,- loop detection,completed,39.7,0.0,,8.4 min,0,0,0.0,39.7,39.7,39.7,3 budget extension(s); throttled 9.0 min (summed across agents); 9 agents
+parallel_batch,legit,- circuit breakers,completed,39.7,0.0,,8.4 min,0,0,0.0,39.7,39.7,39.7,3 budget extension(s); throttled 9.0 min (summed across agents); 9 agents
+parallel_batch,legit,- cap extensions,"KILLED: budget exhausted for run0 subtree, extension denied",4.72,0.0,,66 s,0,6,1.98,4.72,2.74,0.1,9 agents
+parallel_batch,legit,- velocity throttling,completed,39.7,0.0,,7.1 min,0,0,0.0,39.7,39.7,39.7,3 budget extension(s); 9 agents
+tool_retry_loop,runaway,layered (all layers),stopped: run breaker: agent kept calling a tool whose circuit is open,1.0,0.68,42 s,107 s,0,0,0.0,1.0,1.0,0.0,
+tool_retry_loop,runaway,- hierarchical budgets,stopped: run breaker: agent kept calling a tool whose circuit is open,1.0,0.68,42 s,107 s,0,0,0.0,1.0,1.0,0.0,
+tool_retry_loop,runaway,- loop detection,stopped: run breaker: agent kept calling a tool whose circuit is open,1.0,0.68,42 s,107 s,0,0,0.0,1.0,1.0,0.0,
+tool_retry_loop,runaway,- circuit breakers,stopped: loop detected: action novelty 0.35 < 0.4,1.76,1.45,81 s,2.5 min,0,0,0.0,1.76,1.76,0.0,
+tool_retry_loop,runaway,- cap extensions,stopped: run breaker: agent kept calling a tool whose circuit is open,1.0,0.68,42 s,107 s,0,0,0.0,1.0,1.0,0.0,
+tool_retry_loop,runaway,- velocity throttling,stopped: run breaker: agent kept calling a tool whose circuit is open,1.0,0.68,42 s,107 s,0,0,0.0,1.0,1.0,0.0,
+recursive_spawn,runaway,layered (all layers),"stopped: budget exhausted for run0 subtree, extension denied",4.94,4.88,26 s,52 s,0,30,0.85,4.94,4.09,0.24,127 agents
+recursive_spawn,runaway,- hierarchical budgets,still spawning when simulator capped it at 3000 agents; then stopped: tenant budget exhausted (tenant:acme),199.94,199.87,—,39.4 min,0,252,7.18,199.94,192.76,25.61,throttled 1114 h (summed across agents); 3000 agents
+recursive_spawn,runaway,- loop detection,"stopped: budget exhausted for run0 subtree, extension denied",4.94,4.88,26 s,52 s,0,30,0.85,4.94,4.09,0.24,127 agents
+recursive_spawn,runaway,- circuit breakers,"stopped: budget exhausted for run0 subtree, extension denied",4.94,4.88,26 s,52 s,0,30,0.85,4.94,4.09,0.24,127 agents
+recursive_spawn,runaway,- cap extensions,"stopped: budget exhausted for run0 subtree, extension denied",4.94,4.88,26 s,52 s,0,30,0.85,4.94,4.09,0.24,127 agents
+recursive_spawn,runaway,- velocity throttling,"stopped: budget exhausted for run0 subtree, extension denied",4.94,4.88,26 s,52 s,0,30,0.85,4.94,4.09,0.24,127 agents
+nonconverging_plan,runaway,layered (all layers),stopped: loop detected: action novelty 0.35 < 0.4,2.23,2.09,2.7 min,3.4 min,0,0,0.0,2.23,2.23,0.0,
+nonconverging_plan,runaway,- hierarchical budgets,stopped: loop detected: action novelty 0.35 < 0.4,2.23,2.09,2.7 min,3.4 min,0,0,0.0,2.23,2.23,0.0,
+nonconverging_plan,runaway,- loop detection,still running at horizon,119.59,119.45,—,60.0 min,0,0,0.0,119.59,119.59,119.59,5 budget extension(s); throttled 8.5 min (summed across agents)
+nonconverging_plan,runaway,- circuit breakers,stopped: loop detected: action novelty 0.35 < 0.4,2.23,2.09,2.7 min,3.4 min,0,0,0.0,2.23,2.23,0.0,
+nonconverging_plan,runaway,- cap extensions,stopped: loop detected: action novelty 0.35 < 0.4,2.23,2.09,2.7 min,3.4 min,0,0,0.0,2.23,2.23,0.0,
+nonconverging_plan,runaway,- velocity throttling,stopped: loop detected: action novelty 0.35 < 0.4,2.23,2.09,2.7 min,3.4 min,0,0,0.0,2.23,2.23,0.0,

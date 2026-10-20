@@ -1,0 +1,6 @@
+detector,fired_on_successful_pct,fired_on_successful_n,fired_on_failed_pct,fired_on_failed_n
+exact (tool + arguments),0.0,0,0.0,0
+tool name only,1.4,16,2.0,16
+"tool name only, all messages alike",20.4,241,38.6,308
+"exact, tighter window (10/5)",0.0,0,0.0,0
+breaker,0.0,0,0.0,0
